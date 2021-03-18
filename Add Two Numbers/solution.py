@@ -5,6 +5,10 @@ class ListNode:
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        """
+        Time Complexity:    O(max(m, n))
+        Space Complexity:   O(max(m, n) + 1)
+        """
         current = head = ListNode()
         carry = 0
         while (l1 or l2):
