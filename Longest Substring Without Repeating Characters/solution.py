@@ -3,6 +3,8 @@ class Solution:
         """
         Brute Force
         -----------
+        Time Complexity:    O(n^3)
+        Space Complexity:   O(n)
         """
         substring = str() 
         for i in range(len(s)):
@@ -17,15 +19,18 @@ class Solution:
         return len(substring)
 
     def lengthOfLongestSubstring2(self, s: str) -> int:
+        """
+        Sliding Window
+        --------------
+        Time Complexity:    O(n)
+        Space Complexity:   O(n)
+        """
         left = right = 0
         char_used = dict()
         ans = 0
         while (right < len(s)):
-            if (char_used.get(s[right], 0)):
-                char_used.pop(s[left])
-                left += 1
-            else:
-                char_used[s[right]] = 1
-                right += 1
-            ans = max(ans, len(char_used))
+            if s[right] in char_used:
+                left = max(left, char_used[s[right]] + 1)
+            char_used[s[right]] = right
+            ans = max(ans, right - left + 1)
         return ans
