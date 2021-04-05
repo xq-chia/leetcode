@@ -1,11 +1,4 @@
 """
-1. Initiate head to the 1st item(index: 0) of the list
-2. Compare it to the item next to it
-3. If the nth item is greater than (n+1)th item, swap them
-4. Advance head to the next
-5. Repeat the comparison until reaches the last(n-k)th item in the list
-6. Repeat the entire process until k = n
-
 Time Complexity:    O(n^2)
 Space Complexity:   O(1)
 

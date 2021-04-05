@@ -1,8 +1,4 @@
 """
-1. Find the smallest integer in the list
-2. Swap the smallest integer with the head of the list
-3. Advance the head of the list to the next
-
 Time Complexity:    O(n^2)
 Space Complexity:   O(1)
 
